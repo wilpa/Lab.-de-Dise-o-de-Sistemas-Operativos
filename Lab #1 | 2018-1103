@@ -26,12 +26,11 @@ int main(int argc, char *argv[])
 				printf("%s", str);
 				fgets(str, BUFFER_SIZE, stdin);
 			}
-			
-			if(feof(stdin)){
-			    continue;
-			}
+
 
 		}
+		
+		else{
 		
 		FILE *file;
 		file = fopen(argv[i], "r");
@@ -39,9 +38,13 @@ int main(int argc, char *argv[])
 			printf("wcat: no se puede abrir el archivo ya que no existe %s\n", argv[i]);
 			return -1;
 		}
+		
+		else{
 		char x;
 		while((x=fgetc(file)) != EOF){
 			printf("%c", x);
+		  }
+		 }
 		}
 		fclose(file);
 	    i++;
