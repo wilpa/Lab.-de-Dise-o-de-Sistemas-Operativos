@@ -45,8 +45,9 @@ int main(int argc, char *argv[])
 			printf("%c", x);
 		  }
 		 }
+		 fclose(file);
 		}
-		fclose(file);
+		
 	    i++;
 	}
 	
